@@ -11,8 +11,15 @@ import java.io.PrintWriter;
 @WebServlet("/")
 public class WelcomeServlet extends HttpServlet {
 
-    static String PAGE_HEADER = "<html><head><title>Welcome</title></head><body>";
-    static String PAGE_FOOTER = "</body></html>";
+    static String PAGE_HEADER = """
+        <html lang="en">
+            <head>
+                <title>Welcome</title>
+            </head>
+            <body>""";
+    static String PAGE_FOOTER = """
+            </body>
+        </html>""";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
